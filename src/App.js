@@ -1,13 +1,15 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import addList from './pages/addList';
-import deleteForm from './pages/deleteForm';
+import AddList from './pages/AddList';
+import DeleteForm from './pages/DeleteForm';
 
 function App() {
   return (
     <div>
       <BrowserRouter>
-        <Route path = 'addlist' element ={<addList/>} />
-        <Route path = 'deleteform' element ={<deleteForm/>} />
+        <Routes>
+          <Route path='/addlist' element={<AddList />} />
+          <Route path='/deleteform/:no' element={<DeleteForm />} />
+        </Routes>
       </BrowserRouter>
     </div>
   );
